@@ -126,4 +126,4 @@ For detailed API testing, refer to the [Postman Documentation](https://documente
 - **Search/Delete Employee Page**:
 - **Full Employee Table Page**: 
 - **Database Example**: (Include screenshot here)
-- **Spring Tool Suite (STS4)**: (Include screenshot here)
+- **Spring Tool Suite (STS4)**: ![STS 4 working](https://github.com/HardikMalik20/ProjectVE2/blob/46d705d5779c1b172e49f847fcb4221fabb6ad36/B1.PNG)
