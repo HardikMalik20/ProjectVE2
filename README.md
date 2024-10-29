@@ -97,7 +97,9 @@ The following REST API endpoints are available (assuming the Spring Boot server 
    spring.datasource.password=<your-database-password>
    spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 4. First, launch the backend project in Spring Tool Suite (STS), named **"testing"**, and verify the database connection.
-5. Once the backend is running and connected to the database, open `index.html` from the frontend to access the application.
+5. Make sure to add your database schema name in your above code, so that the table will be created in the required database. In our case, we have chosen **/test_db** in our
+   spring.datasource.url=jdbc:mysql://localhost:3306/test_db code.
+6. Once the backend is running and connected to the database, open `index.html` from the frontend to access the application.
 
 ## Backend Instructions
 Make sure to have the following dependecies installed in your system before executing it
