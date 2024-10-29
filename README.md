@@ -47,10 +47,12 @@ The project contains the following main files:
 - **Responsive Side Navigation**: For easy navigation between pages.
 
 ## Usage Instructions
-1. Open `index.html` to access the main menu.
-2. Use the **New Employee Registration** form to add employees.
-3. Search and delete employee records on the **Search Employee** page.
-4. View a complete list of employees on the **All Employees** page.
+1. Firstly start the backend code,i.e., the STS 4 code.(How to do it is given below).
+2. Connect it with database.(How to establish it is given below).
+3. Open `index.html` to access the main menu.
+4. Use the **New Employee Registration** form to add employees.
+5. Search and delete employee records on the **Search Employee** page.
+6. View a complete list of employees on the **All Employees** page.
 
 ## API Endpoints
 The following REST API endpoints are available (assuming the Spring Boot server is running locally):
