@@ -1,0 +1,429 @@
+/* links.html */
+.first {
+    width: 300px;
+    border: 2px solid;
+    text-align: left;
+    /* margin-left: 25%; */
+    height: 300px;
+    /* padding-top: 10%; */
+    margin-top: 3%;
+}
+
+.text {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+    /* background-color: rgba(128, 0, 128, 0.733); */
+    color: white;
+}
+/* --------------------------------------------------------------------------------------------------------------------
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+/* index.html */
+.next {
+    width: 45%;
+    height: 500px;
+    margin-right: 2%;
+    float: left;
+    /* border: 2px solid; */
+
+}
+
+.pic {
+    width: 1000px;
+    height: 550px;
+    margin-left: 0%;
+    padding-left: 0%;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+/* EmployeeRegistration.html */
+.img {
+    margin-left: 0%;
+    padding-left: 0%;
+    width: 1000px;
+    height: 550px;
+    /* margin-right:2%; */
+    margin-top: 3%;
+    /* float: left;  */
+    /* border: 2px solid; */
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+    /* background-image: url('images.jfif'); */
+}
+
+.head {
+    text-align: center;
+    color: white;
+}
+
+#newup{
+    word-spacing: normal;
+    font-size: 26px;
+    font-family: calibri;
+    font-weight: normal;
+    /* border: 2px solid; */
+    height: 30px;
+    text-align: center;
+    color: white;
+}
+
+.formcomp{
+    /* border: 2px solid; */
+    height: 80%;
+}
+
+#submitButton{
+    background-color: rgba(128, 0, 128, 0.733);
+    color: white;    
+    font-size: 40px;
+}
+
+#res{
+    background-color: rgba(128, 0, 128, 0.733);
+    color: white;
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.box {
+    width: 500px;
+    text-align: center;
+    height: 100px;
+    /* background-color: rgba(128, 0, 128, 0.733);
+    color: white; */
+    /* font-weight: bolder; */
+    margin-left: 32%;
+    font-family: 'Times New Roman', Times, serif;
+    /* border: 2px solid; */
+    padding-bottom: 10px;
+    padding-left: 5px;
+    /* align-items: center; */
+    padding-top: 0%;
+    /* margin-top: %; */
+}
+
+#linktag {
+    color: black;
+    text-decoration: none;
+    background-color: rgba(128, 0, 128, 0.733);
+    color: white;
+    font-size: large;
+    line-height: 20px;
+    height: 30px;
+    padding-top: 2px;
+    padding-bottom: 1.3px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#linktag:hover{
+    background-color:rgba(117, 4, 89, 0.384) ;
+}
+
+.formpart {
+    width: 80%;
+    float: left;
+    /* border: 2px solid; */
+    margin-left: 10%;
+    text-align: center;
+    height: 350px;
+    word-spacing: 50px;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+/* common to all */
+.sub {
+    background-color: rgba(128, 0, 128, 0.733);
+    color: white;
+    /* font-weight: bold; */
+    /* margin-top: 10px; */
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    cursor: pointer;
+    border: 2px solid;
+}
+
+.full {
+    background-image: linear-gradient(to right,rgba(201, 17, 140, 0.918)30%, rgba(161, 6, 161, 0.925) 70%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    /* background-image: url(download.jfif); */
+    /* /* width: 100px; */
+    /* height:2000px; */
+    /* object-fit: cover; */
+}
+
+.fullsearch {
+    background-image: linear-gradient(to right,rgba(201, 17, 140, 0.918)30%, rgba(161, 6, 161, 0.925) 70%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    /* background-image: url(download.jfif); */
+    width: 100px;
+    height:625px;
+    /* /* object-fit: cover; */
+}
+
+.foot {
+    color: white;
+}
+
+.footer-text {
+    border: 2px solid;
+    width: 25%;
+    margin-top: 40%;
+
+}
+
+
+.tableinfo {
+    /* border:2px solid; */
+    text-align: center;
+    margin-top: 80px;
+    width: 300px;
+    margin-left: 480px;
+}
+
+table {
+    margin-left: 20px;
+    border-bottom: 2px solid;
+    border-collapse: collapse;
+    width: 1300px;
+}
+
+tbody {
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: #730477;
+    color: white;
+    text-align: left;
+    padding: 8px;
+}
+
+#new{
+    border: 2px solid;
+    /* margin-left:60%; */
+    width: 200px;
+}
+
+.heading{
+    font-size: 100px;
+    font-family: Agency FB;
+    color: white;
+    /* border: 2px solid; */
+    height: 230px;
+    margin-top: 0%;
+}
+
+.newhead{
+    /* border: 2px solid; */
+    height: 240px;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 22%;
+    width: 55%;
+}
+
+/* .element-1{
+    border: 2px solid;
+} */
+
+.para{
+    color: rgba(245, 245, 245, 0.616);
+    font-family:Calibri;
+    font-weight: bold;
+    /* border: 2px solid;
+    height: 90px; */
+    padding-top: 0%;
+    font-size: larger;
+    margin-top: 0%;
+}
+
+.parag{
+    /* border: 2px solid; */
+    text-align: center;
+    width:70%;
+    height: 75px;
+    margin-left: 15%;
+    margin-bottom: 30%;
+    /* margin-top: 10px; */
+}
+
+.clicks {
+    color: white;
+    font-family: Calibri;
+    font-size: large;
+    cursor: pointer;
+    height: 10%;
+    text-decoration: none;
+    font-weight: bold;
+    /* border: 2px solid; */
+    width: 20%;
+}
+
+.clickclass:hover{
+    background-color: rgba(117, 4, 89, 0.384);
+}
+
+.clickclass{
+    background-color: rgba(128, 0, 128, 0.733);
+    border: 2px solid;
+    width:20%;
+    height: 28px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-left: 40%;
+    border-radius: 30px;
+}
+
+.contentinfo{
+    border: none;
+    background-color:transparent;
+    border-bottom: 2px solid;
+    color: rgba(255, 255, 255, 0.384);
+    font-size: larger;
+}
+
+.contentinfo:current{
+    border: none;
+    background-color:transparent;
+    border-bottom: 2px solid;
+}
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.384);
+}
+
+#dob{
+    color: rgba(255, 255, 255, 0.384);
+    font-size: large;
+    word-spacing: normal;
+}
+
+
+
+#up{
+    font-size: 20px;
+    font-family: calibri;
+}
+
+.pdf{
+    border: 2px dotted white;
+    border-radius: 10%;
+    width: 280px;
+    /* margin-top: 40%; */
+    text-align: center;
+    margin-left: 40%;
+    height:220px;
+    /* padding-top: 180px; */
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.26);
+}
+
+.pdf:hover{
+    border: 2px solid white;
+}
+
+.insidepdf{
+    /* border: 2px solid; */
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#pdfupload{
+    display: none;
+}
+
+#textin{
+    color: white;
+    font-family: calibri;
+    font-size: large;
+    cursor: pointer;
+    font-weight: bold;
+}
+#upload{
+    border: 2px solid;
+    height: 50px;
+    width: 100px;
+    margin-top: 60px;
+}
+
+.resume{
+    margin-top: 28%;
+    /* border: 2px solid; */
+    height: 360px;
+    text-align: center;
+}
+
+.underheadtext{
+    color: rgba(245, 245, 245, 0.616);
+    font-family:Calibri;
+    font-weight: bold;
+    /* border: 2px solid; */
+    height: 20px;
+    padding-top: 0%;
+    font-size: large;
+    margin-top: 0%;
+}
+
+.newpara{
+    color: white;
+    font-family: calibri;
+    font-size: small;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 0%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    /* padding-top: 50px; */
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

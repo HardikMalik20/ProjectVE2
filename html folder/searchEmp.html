@@ -1,0 +1,169 @@
+<!--This is the List View with Delete-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Searching Employee</title>
+    <link rel="stylesheet" href="/css/searchEmp.css" />
+  </head>
+  <body class="fullsearch">
+    <!--Back-->
+    <a href="index.html" class="sub" id="linktag">Back</a>
+
+    <!-- Search bar section for inputting employee ID and triggering search -->
+    <div class="searchBar">
+        <div class="inside">
+            <label for="emp">
+                Search Employee: 
+            </label>
+            <br />
+        </div>
+        <input type="number" name="emp" id="emp" />
+
+        <!-- Button for search function -->
+        <button type="submit" class="sub" onclick="getEmpDetails()">
+            Search
+        </button>
+
+        <!-- Button to reset the search input field -->
+        <button type="reset" onclick="resetSearch()" class="sub">
+            Reset
+        </button>
+    </div>
+
+    <!-- Table to display employee details after a successful search -->
+    <table id="empDetails">
+      <thead>
+        <tr>
+          <th>Employee ID</th>
+          <th>Employee Name</th>
+          <th>Employee Age</th>
+          <th>Employee Gender</th>
+          <th>Employee Phone Number</th>
+          <th>Employee Email Address</th>
+          <th>Employee PAN Number</th>
+          <th>Employee Address</th>
+          <th>Employee City</th>
+          <th>Employee Zip Code</th>
+          <th>Employee Date Of Birth</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+
+  <script>
+
+    // Function to fetch and display employee details based on the provided ID
+    async function getEmpDetails() {
+      const empId = document.getElementById("emp").value;
+      if (!empId) {
+        alert("Mention employee ID");
+        return;
+      }
+
+      try {
+        // Fetch employee details from the API
+        const response = await fetch(
+          `http://localhost:8080/api/v1/products/${empId}`,
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+        if (!response) {
+          alert("No response");
+          return;
+        }
+
+        const data = await response.json();
+        console.log("Success:", data);
+        populateTable(data);
+      } catch (error) {
+        console.error("Error:", error);
+        alert("Wrong ID specified");
+      }
+    }
+
+    function populateTable(item) {
+      const tableBody = document
+        .getElementById("empDetails")
+        .getElementsByTagName("tbody")[0];
+      tableBody.innerHTML = "";
+
+      // data.forEach(item => {
+      const row = tableBody.insertRow();
+
+      // Create and populate each cell in the row with corresponding employee data
+      const cell1 = row.insertCell(0);
+      const cell2 = row.insertCell(1);
+      const cell3 = row.insertCell(2);
+      const cell4 = row.insertCell(3);
+      const cell5 = row.insertCell(4);
+      const cell6 = row.insertCell(5);
+      const cell7 = row.insertCell(6);
+      const cell8 = row.insertCell(7);
+      const cell9 = row.insertCell(8);
+      const cell10 = row.insertCell(9);
+      const cell11 = row.insertCell(10);
+
+      cell1.textContent = item.id;
+      cell2.textContent = item.name;
+      cell3.textContent = item.age;
+      cell4.textContent = item.gender;
+      cell5.textContent = item.phoneNumber;
+      cell6.textContent = item.emailAddress;
+      cell7.textContent = item.panNumber;
+      cell8.textContent = item.employeeAddress;
+      cell9.textContent = item.employeeCity;
+      cell10.textContent = item.employeeZipCode;
+      cell11.textContent = item.employeeDOB;
+
+      // Create delete button cell
+      const deleteCell = row.insertCell(11);
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.className = "sub";
+        deleteButton.onclick = () => deleteEmployee(item.id); // Attach delete function
+        deleteCell.appendChild(deleteButton);
+    }
+
+    // Function to delete employee based on employee ID
+    async function deleteEmployee(empId) {
+        if (confirm("Are you sure you want to delete this employee?")) {
+            try {
+                const response = await fetch(
+                    `http://localhost:8080/api/v1/products/${empId}`,
+                    {
+                        method: "DELETE",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                    }
+                );
+
+                if (response.ok) {
+                    alert("Employee deleted successfully");
+                    resetSearch(); // Clear the search input
+                    document.getElementById("empDetails").getElementsByTagName("tbody")[0].innerHTML = ""; 
+                    // Clear table data
+                } else {
+                    alert("Failed to delete employee");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("An error occurred while deleting the employee");
+            }
+        }
+    }
+
+    function resetSearch() {
+      document.getElementById("emp").value = "";
+    }
+  </script>
+</html>

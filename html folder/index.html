@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="full">
+
+    <!-- Side Navigation Bar -->
+    <div id="mySidenav" class="sidenav">
+      <!-- Close button for the side navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- Navigation links to other pages -->
+      <a href="EmployeeRegistration.html">Employee Registration</a><br />
+      <a href="searchEmp.html">Search Employee</a><br  />
+      <a href="fullTable.html">All Employees</a>
+    </div>
+    
+     <!-- Open side navigation button -->
+    <span style="font-size:30px;cursor:pointer;color: white;" onclick="openNav()">&#9776;</span>
+    
+<div class="element-1">
+    <div class="newhead">
+        <h1 class="heading">NEW EMPLOYEE <br />REGISTRATION FORM</h1>
+    </div>
+    <!-- Paragraph introducing the form purpose -->
+    <div class="parag">
+      <p class="para">
+        Hello there! We're excited to have you on board. This form is to collect the<br />
+        necessary details to help us know you better and complete your onboarding<br /> 
+        process smoothly. It's pretty straightforward, so let's get started!
+      </p><br />
+      <div class="clickclass">
+        <a href="EmployeeRegistration.html" class="clicks">SURE   ></a>
+      </div>  
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- JavaScript to control side navigation open and close actions -->
+<script>
+  //Open
+  function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+//Close
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>

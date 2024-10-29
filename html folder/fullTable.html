@@ -1,0 +1,95 @@
+<!--This is the Details View-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch Table Details</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="fullsearch">
+    <a href="index.html" class="sub" id="linktag">Back</a>
+
+    <div class="tableinfo">
+        <button onclick="getTableDetails()" class="sub" id="new">Get Employee Details</button><br /><br />
+    </div>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th class="tablehead">Employee ID</th>
+                    <th class="tablehead">Employee Name</th>
+                    <th class="tablehead">Employee Age</th>
+                    <th class="tablehead">Employee Gender</th>
+                    <th class="tablehead">Employee Phone Number</th>
+                    <th class="tablehead">Employee Email Address</th>
+                    <th class="tablehead">Employee PAN Number</th>
+                    <th class="tablehead">Employee Address</th>
+                    <th class="tablehead">Employee City</th>
+                    <th class="tablehead">Employee Zip Code</th>
+                    <th class="tablehead">Employee Date Of Birth</th>
+                </tr>
+            </thead>
+            <tbody class="tablebody">
+
+            </tbody>
+        </table>
+    
+    <script>
+        async function getTableDetails() {
+  try {
+    const response = await fetch("http://localhost:8080/api/v1/products", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const data = await response.json();
+    console.log("Success:", data);
+    populateTable(data);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
+function populateTable(data) {
+  const tableBody = document
+    .getElementById("productTable")
+    .getElementsByTagName("tbody")[0];
+  tableBody.innerHTML = "";
+  const n = 10;
+  data.forEach((item) => {
+    const row = tableBody.insertRow();
+
+    const cell1 = row.insertCell(0);
+    const cell2 = row.insertCell(1);
+    const cell3 = row.insertCell(2);
+    const cell4 = row.insertCell(3);
+    const cell5 = row.insertCell(4);
+    const cell6 = row.insertCell(5);
+    const cell7 = row.insertCell(6);
+    const cell8 = row.insertCell(7);
+    const cell9 = row.insertCell(8);
+    const cell10 = row.insertCell(9);
+    const cell11 = row.insertCell(10);
+
+    cell1.textContent = item.id;
+    cell2.textContent = item.name;
+    cell3.textContent = item.age;
+    cell4.textContent = item.gender;
+    cell5.textContent = item.phoneNumber;
+    cell6.textContent = item.emailAddress;
+    cell7.textContent = item.panNumber;
+    cell8.textContent = item.employeeAddress;
+    cell9.textContent = item.employeeCity;
+    cell10.textContent = item.employeeZipCode;
+    cell11.textContent = item.employeeDOB;
+  });
+}
+
+    </script>
+</body>
+
+</html>

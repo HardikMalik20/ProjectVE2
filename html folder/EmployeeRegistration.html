@@ -1,0 +1,216 @@
+<!--This is the Add/Edit View-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Submit Form</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+
+  <body class="full">
+    <!-- Link to navigate back to the home page -->
+    <a href="index.html" class="sub" id="linktag">Back</a>
+
+    <header class="head" id="up">
+      <h1>Please fill out the information below:</h1>
+    </header>
+
+    <!-- Form Section -->
+    <div class="formpart">
+      <h3 id="newup">
+        Let's start with some basic information about you!
+      </h3>
+      <div class="formcomp">
+      <form id="myForm">
+        <!-- Input fields for employee name, phone number, age, and other details -->
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Name *"
+          class="contentinfo"
+          required
+        />
+        <input
+          type="number"
+          id="PhoneNumber"
+          name="PhoneNumber"
+          placeholder="Phone Number *"
+          class="contentinfo"
+          required
+        /><br /><br />
+        <!-- <label for="age">Employee Age:</label><br /> -->
+        <input
+          type="number"
+          id="age"
+          name="age"
+          placeholder="Age *"
+          class="contentinfo"
+          required
+        />
+        <!-- <label for="PanNumber">Employee PAN Number:</label><br /> -->
+        <input
+          type="text"
+          id="PanNumber"
+          name="PanNumber"
+          placeholder="PAN Number *"
+          class="contentinfo"
+          required
+          unique
+        /><br /><br />
+        <!-- <label for="salary">Employee Salary:</label><br /> -->
+        <!-- <label for="gender">Employee Gender:</label> -->
+        <input
+          type="text"
+          id="gender"
+          name="gender"
+          placeholder="Gender *"
+          class="contentinfo"
+          required
+        />
+        <input
+          type="email"
+          id="EmailAddress"
+          name="EmailAddress"
+          placeholder="EmailAddress *"
+          class="contentinfo"
+          required
+        />
+        <br /><br />
+        <input
+          type="text"
+          id="EmployeeAddress"
+          name="EmployeeAddress"
+          placeholder="Address *"
+          class="contentinfo"
+          required
+        />
+        <input
+          type="text"
+          id="EmployeeCity"
+          name="EmployeeCity"
+          placeholder="City *"
+          class="contentinfo"
+          required
+        />
+        <br /><br />
+        <input
+          type="number"
+          id="EmployeeZipCode"
+          name="EmployeeZipCode"
+          placeholder="Zip Code *"
+          class="contentinfo"
+          required
+        />
+        <input
+          type="text"
+          id="EmployeeState"
+          name="EmployeeState"
+          placeholder="State *"
+          class="contentinfo"
+          required
+        />
+        <br /><br />
+        <label for="Employeedob" id="dob">Date of Birth: *</label>
+        <input
+          type="date"
+          id="Employeedob"
+          name="Employeedob"
+          placeholder="Date of Birth *"
+          class="contentinfo"
+          required
+        />
+      </form>
+    </div>
+    </div>
+<br />
+<br />
+
+<!-- Section to upload resume -->
+<div class="resume">
+    <h3 class="head" id="newup">
+      Do you have a resume or CV you could share with us?
+      <p class="underheadtext">
+        This will help us understand your professional background better.
+      </p>
+    </h3>
+    <br />
+    <div class="pdf">
+      <img src="/images/upload.png" id="upload" />
+      <div class="insidepdf">
+        <input type="file" name="uploadfile" id="pdfupload" />
+        <label for="pdfupload" id="textin">
+          Drag and drop to upload
+          <p class="newpara">
+            or browse to choose a file
+          </p>
+        </label>
+      </div>
+    </div>
+  </div>
+    
+<!-- Submit and Reset buttons -->
+  <div class="box">
+    <button type="button" id="submitButton">Submit</button>
+    <button type="reset" onclick="FormReset()" id="res">Reset</button>
+  </div>
+
+  <script>
+    document.getElementById("submitButton").addEventListener("click", function (event) {
+      event.preventDefault();
+
+      // Form data gathering
+      const formData = {
+        name: document.getElementById("name").value,
+        phoneNumber: parseFloat(document.getElementById("PhoneNumber").value),
+        age: parseFloat(document.getElementById("age").value),
+        gender: document.getElementById("gender").value,
+        panNumber: document.getElementById("PanNumber").value,
+        emailAddress: document.getElementById("EmailAddress").value,
+        employeeAddress: document.getElementById("EmployeeAddress").value,
+        employeeCity: document.getElementById("EmployeeCity").value,
+        employeeZipCode: parseFloat(document.getElementById("EmployeeZipCode").value),
+        employeeState: document.getElementById("EmployeeState").value,
+        employeeDOB: document.getElementById("Employeedob").value,
+      };
+
+      const panNumber = document.getElementById("PanNumber").value;
+        // Check if the PAN number already exists in the database
+        fetch(`http://localhost:8080/api/v1/Pan?PanNumber=${panNumber}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            alert("PAN Number already exists");
+          })
+          .catch((error) => {
+            // Send data to server if PAN number is unique
+            fetch("http://localhost:8080/api/v1/product", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(formData),
+            })
+              .then((response) => response.json())
+              .then((data) => {
+                // Show success alert after submission
+                alert("Submitted");
+                console.log("Success:", data);
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+              });
+          });
+      });
+
+    function FormReset() {
+      document.getElementById("myForm").reset();
+    }
+  </script>
+</body>
+</html>

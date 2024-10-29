@@ -1,0 +1,49 @@
+.searchBar {
+    text-align: center;
+    margin-top: 80px;
+    /* border: 2px solid; */
+    width: 400px;
+    margin-left: 450px;
+}
+
+#empDetails {
+    margin-left: 20px;
+    margin-top: 25px;
+    /* border: 2px solid; */
+    width: 1300px;
+}
+
+.inside {
+    /* margin-top: 5%; */
+    margin-left: 7%;
+    /* padding-left: 39%; */
+    /* border: 2px solid; */
+    /* text-align: center; */
+    /* padding-left: 100px; */
+    width: 200px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.fullsearch {
+    background-image: linear-gradient(to right,rgba(201, 17, 140, 0.918)30%, rgba(161, 6, 161, 0.925) 70%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    /* background-image: url(download.jfif); */
+    width: 100px;
+    height:625px;
+    /* /* object-fit: cover; */
+}
+
+.sub {
+    background-color: rgba(128, 0, 128, 0.733);
+    color: white;
+    /* font-weight: bold; */
+    /* margin-top: 10px; */
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    cursor: pointer;
+    border: 2px solid;
+}
