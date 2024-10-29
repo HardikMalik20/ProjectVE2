@@ -121,7 +121,7 @@ Make sure to have the following dependecies installed in your system before exec
 For detailed API testing, refer to the [Postman Documentation](https://documenter.getpostman.com/view/35948743/2sAY4uCNrB).
 
 ## Working Screenshots
-- **Index Page**: ![Index Page]()
+- **Index Page**: ![Index Page](https://github.com/HardikMalik20/ProjectVE2/blob/08b9cefc7271181575e471d71638c2bcc71abe9c/F2.PNG)
 - **Employee Registration Page**: ![Employee Registration Page]()
 - **Database Example**: ![Database Working](https://github.com/HardikMalik20/ProjectVE2/blob/d8bb62c85aadf95b9bf44e687a1b6c09adbe630b/Db1.PNG)
 - **Spring Tool Suite (STS4)**: ![STS 4 working](https://github.com/HardikMalik20/ProjectVE2/blob/46d705d5779c1b172e49f847fcb4221fabb6ad36/B1.PNG)
